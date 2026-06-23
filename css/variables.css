@@ -1,0 +1,53 @@
+:root {
+  /* ===== Palette ===== */
+  --creme: #F5EDE0;
+  --creme-fonce: #EDE0CC;
+  --bordeaux: #6B1535;
+  --bordeaux-clair: #8C2348;
+  --or: #C9922A;
+  --or-clair: #E0B158;
+  --aubergine: #3D1A3A;
+  --texte: #1C0A0A;
+  --texte-clair: rgba(28, 10, 10, 0.6);
+  --texte-tres-clair: rgba(28, 10, 10, 0.4);
+  --blanc-pur: #FDFAF6;
+  --vert-whatsapp: #2A7A4B;
+
+  /* ===== Typographie ===== */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-accent: 'Cormorant Garamond', Georgia, serif;
+
+  --text-display: clamp(2.2rem, 6vw, 4.5rem);
+  --text-title: clamp(1.6rem, 3.5vw, 2.5rem);
+  --text-lg: clamp(1.1rem, 1.6vw, 1.35rem);
+  --text-base: clamp(0.95rem, 1.1vw, 1.05rem);
+  --text-sm: clamp(0.8rem, 0.9vw, 0.9rem);
+  --text-xs: clamp(0.7rem, 0.8vw, 0.78rem);
+
+  /* ===== Spacing fluide ===== */
+  --space-xs: clamp(0.5rem, 1vw, 0.75rem);
+  --space-sm: clamp(1rem, 2vw, 1.5rem);
+  --space-md: clamp(1.5rem, 3vw, 2.5rem);
+  --space-lg: clamp(2.5rem, 5vw, 4rem);
+  --space-xl: clamp(4rem, 8vw, 7rem);
+  --space-2xl: clamp(5rem, 11vw, 10rem);
+
+  /* ===== Transitions ===== */
+  --transition-fast: 200ms ease;
+  --transition-base: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 700ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ===== Radius ===== */
+  --radius-sm: 8px;
+  --radius-md: 24px;
+  --radius-lg: 48px;
+  --radius-full: 999px;
+
+  /* ===== Z-index scale ===== */
+  --z-fragment: 1;
+  --z-content: 10;
+  --z-float: 20;
+  --z-nav: 100;
+  --z-fab: 90;
+}

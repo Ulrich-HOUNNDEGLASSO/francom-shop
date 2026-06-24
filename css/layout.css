@@ -209,7 +209,7 @@
   flex-direction: column;
   gap: var(--space-xs);
   z-index: var(--z-content);
-  margin-top: 6rem;
+  margin-top: 4rem;
 }
 
 .btn-primary {

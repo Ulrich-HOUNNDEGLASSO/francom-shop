@@ -103,7 +103,7 @@ function renderCards() {
     : pagnes.filter(p => p.categorie === state.categorieActive);
 
   grid.innerHTML = filtered.map((pagne, i) => `
-    <article class="pagne-card reveal-scale reveal-delay-${(i % 4) + 1} ${state.pagneActif?.id === pagne.id ? 'active' : ''}"
+    <div class="pagne-card reveal-scale reveal-delay-${(i % 4) + 1} ${state.pagneActif?.id === pagne.id ? 'active' : ''}"
       data-id="${pagne.id}" role="button" tabindex="0" aria-label="Voir le ${pagne.nom}">
       <img class="pagne-card-img" src="${pagne.image}" alt="${pagne.nom}" loading="lazy"
         onerror="this.style.background='${pagne.couleur}33'">
@@ -118,7 +118,7 @@ function renderCards() {
         <div class="pagne-card-price">${formatPrix(pagne.prix)}</div>
       </div>
       <div class="pagne-card-active-ring" aria-hidden="true"></div>
-    </article>
+    </div>
   `).join('');
 
   grid.querySelectorAll('.pagne-card').forEach(card => {

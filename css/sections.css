@@ -137,6 +137,43 @@
 }
 .pagne-card.active .pagne-card-active-ring { opacity: 1; }
 
+.pagne-card-zoom {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  z-index: 5;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(253, 250, 246, 0.85);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bordeaux);
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.pagne-card-zoom:hover {
+  background: var(--bordeaux);
+  color: var(--creme);
+}
+
+/* Sur les écrans qui supportent un vrai survol (souris/trackpad),
+   la loupe reste discrète et n'apparaît qu'au hover de la card.
+   Sur tactile (hover impossible), elle reste visible en permanence. */
+@media (hover: hover) and (pointer: fine) {
+  .pagne-card-zoom {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+
+  .pagne-card:hover .pagne-card-zoom {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .gros-banner {
   margin-top: var(--space-md);
   background: var(--bordeaux);

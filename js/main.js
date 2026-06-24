@@ -108,6 +108,11 @@ function renderCards() {
       <img class="pagne-card-img" src="${pagne.image}" alt="${pagne.nom}" loading="lazy"
         onerror="this.style.background='${pagne.couleur}33'">
       <div class="pagne-card-overlay" aria-hidden="true"></div>
+      <button class="pagne-card-zoom" data-zoom-id="${pagne.id}" aria-label="Zoomer sur ${pagne.nom}">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>
+        </svg>
+      </button>
       <div class="pagne-card-body">
         <div class="pagne-card-name">${pagne.nom}</div>
         <div class="pagne-card-price">${formatPrix(pagne.prix)}</div>
@@ -211,13 +216,12 @@ function initLightbox() {
   const img = $('#lightboxImg');
   const closeBtn = $('#lightboxClose');
   const visual = $('.lookbook-visual');
-  if (!overlay || !img || !visual) return;
+  if (!overlay || !img) return;
 
-  function open() {
-    const activeImg = visual.querySelector('.lookbook-img.active');
-    if (!activeImg) return; // rien à montrer tant qu'aucun pagne n'est sélectionné
-    img.src = activeImg.src;
-    img.alt = activeImg.alt;
+  function open(src, alt) {
+    if (!src) return;
+    img.src = src;
+    img.alt = alt || '';
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
@@ -227,15 +231,26 @@ function initLightbox() {
     document.body.style.overflow = '';
   }
 
-  visual.addEventListener('click', (e) => {
-    // Le toggle Femme/Homme ne doit pas ouvrir la lightbox
+  visual?.addEventListener('click', (e) => {
     if (e.target.closest('.lookbook-genre-toggle')) return;
-    open();
+    const activeImg = visual.querySelector('.lookbook-img.active');
+    if (activeImg) open(activeImg.src, activeImg.alt);
   });
 
   closeBtn?.addEventListener('click', close);
   overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+
+  // Zoom depuis les cards du catalogue (délégation d'événement,
+  // fonctionne même quand renderCards() régénère le HTML)
+  document.addEventListener('click', (e) => {
+    const zoomBtn = e.target.closest('.pagne-card-zoom');
+    if (!zoomBtn) return;
+    e.stopPropagation();
+    const id = parseInt(zoomBtn.dataset.zoomId);
+    const pagne = pagnes.find(p => p.id === id);
+    if (pagne) open(pagne.image, pagne.nom);
+  });
 }
 
 // ============================================

@@ -332,8 +332,8 @@
 
   .hero-titre {
     max-width: 100%;
-    font-size: clamp(4rem, 10vw, 5rem);
-    margin-top: clamp(7rem, 26vh, 8rem);
+    font-size: clamp(2.5rem, 9vw, 3rem);
+    margin-top: clamp(7rem, 26vh, 9rem);
   }
 
 

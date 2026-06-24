@@ -139,11 +139,11 @@
 
 .pagne-card-zoom {
   position: absolute;
-  top: 0.7rem;
-  right: 0.7rem;
+  top: 0.6rem;
+  right: 0.6rem;
   z-index: 5;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: rgba(253, 250, 246, 0.85);
   backdrop-filter: blur(4px);
@@ -526,6 +526,17 @@
   background: rgba(107, 21, 53, 0.2);
   transition: all var(--transition-fast);
   cursor: pointer;
+  position: relative;
+}
+
+.wa-dot::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 44px;
+  height: 44px;
+  transform: translate(-50%, -50%);
 }
 .wa-dot.active { background: var(--bordeaux); width: 22px; border-radius: 4px; }
 
@@ -596,7 +607,7 @@
   align-items: center;
   justify-content: space-between;
   font-size: var(--text-xs);
-  color: rgba(245, 237, 224, 0.35);
+  color: rgba(245, 237, 224, 0.5);
   flex-wrap: wrap;
   gap: var(--space-xs);
 }

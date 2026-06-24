@@ -42,154 +42,154 @@
 
     <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
+  <main>
+    <!-- ==================== HERO — Diagonale de tissu ==================== -->
+    <section class="hero" id="accueil">
 
-  <!-- ==================== HERO — Diagonale de tissu ==================== -->
-  <section class="hero" id="accueil">
+      <div class="hero-diagonale" aria-hidden="true">
+        <img src="assets/images/hero/tissu-diagonale.webp" alt="" loading="eager" onerror="this.parentElement.style.background='var(--bordeaux)'">
+      </div>
 
-    <div class="hero-diagonale" aria-hidden="true">
-      <img src="assets/images/hero/tissu-diagonale.webp" alt="" loading="eager" onerror="this.parentElement.style.background='var(--bordeaux)'">
+
+      <h1 class="hero-titre">
+        Le pagne qui<br>
+        raconte votre<br>
+        <span class="accent">histoire</span>
+      </h1>
+
+      <div class="hero-actions">
+        <a href="#catalogue" class="btn-primary">Découvrir le catalogue</a>
+        <a href="#lookbook" class="btn-secondary">
+          <span class="play-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--texte)"><path d="M8 5v14l11-7z"/></svg>
+          </span>
+          Voir le lookbook
+        </a>
+      </div>
+    </section>
+
+    <div class="evenements-bandeau">
+      <span class="event-pill"><span class="dot" style="background:#6B1535"></span>Nonvitcha</span>
+      <span class="event-pill"><span class="dot" style="background:#C9922A"></span>Saint-Valentin</span>
+      <span class="event-pill"><span class="dot" style="background:#3D1A3A"></span>1er Mai</span>
+      <span class="event-pill"><span class="dot" style="background:#6B1535"></span>8 Mars</span>
+      <span class="event-pill"><span class="dot" style="background:#C9922A"></span>Noël</span>
     </div>
 
+    <div class="vague" data-vague data-vague-fill="vague-fill-creme-fonce" data-vague-fragment="assets/images/fragments/fragment-3.webp"></div>
 
-    <h1 class="hero-titre">
-      Le pagne qui<br>
-      raconte votre<br>
-      <span class="accent">histoire</span>
-    </h1>
+    <!-- ==================== CATALOGUE ==================== -->
+    <section class="section section-creme-fonce" id="catalogue" aria-label="Catalogue des pagnes">
+      <div class="section-header">
+        <div class="reveal">
+          <h2 class="section-title">Le pagne de<br>chaque moment</h2>
+        </div>
+        <p class="section-note reveal reveal-delay-1">
+          Du mariage à la Saint-Valentin, chaque événement a son motif, sa couleur, son histoire.
+        </p>
+      </div>
 
-    <div class="hero-actions">
-      <a href="#catalogue" class="btn-primary">Découvrir le catalogue</a>
-      <a href="#lookbook" class="btn-secondary">
-        <span class="play-icon">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--texte)"><path d="M8 5v14l11-7z"/></svg>
+      <div class="catalogue-filters" role="group" aria-label="Filtrer par catégorie"></div>
+      <div class="catalogue-grid"  aria-label="Pagnes disponibles"></div>
+
+      <div class="gros-banner reveal">
+        <div>
+          <div class="gros-banner-title">Vous commandez pour un groupe ?</div>
+          <p class="gros-banner-text">Associations, entreprises ou organisateurs d'événements, demandez votre devis gros.</p>
+        </div>
+        <button class="btn-gros" data-action="commande-gros">Demander un devis</button>
+      </div>
+    </section>
+
+    <div class="vague" data-vague data-vague-fill="vague-fill-creme" data-vague-flip="true"></div>
+
+    <!-- ==================== LOOKBOOK ==================== -->
+    <section class="section" id="lookbook" aria-label="Aperçu du pagne sélectionné">
+      <div class="section-header">
+        <div class="reveal">
+          <h2 class="section-title">Vu sur eux</h2>
+        </div>
+        <p class="section-note reveal reveal-delay-1">
+          Sélectionnez un pagne dans le catalogue pour voir comment il se porte, en version femme ou homme.
+        </p>
+      </div>
+
+      <div class="lookbook-wrap">
+        <div class="lookbook-visual" role="img" aria-label="Visuel du pagne sélectionné">
+          <div class="lookbook-placeholder" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+            <p>Sélectionnez un pagne<br>dans le catalogue</p>
+          </div>
+          <div class="lookbook-genre-toggle" role="group" aria-label="Genre">
+            <button class="genre-btn active" data-genre="femme">Femme</button>
+            <button class="genre-btn" data-genre="homme">Homme</button>
+          </div>
+        </div>
+
+        <div class="lookbook-info">
+          <p class="lookbook-empty">« Choisissez un pagne dans le catalogue pour découvrir le look. »</p>
+        </div>
+      </div>
+
+      <a href="#catalogue" class="cta-retour-catalogue reveal">
+        <span class="cta-retour-mini">
+          <span class="cta-retour-swatch" style="background:#6B1535"></span>
+          <span class="cta-retour-swatch" style="background:#C9922A"></span>
+          <span class="cta-retour-swatch" style="background:#3D1A3A"></span>
         </span>
-        Voir le lookbook
+        <span class="cta-retour-text">Voir tout le catalogue</span>
+        <svg class="cta-retour-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <path d="M5 12h14M13 6l6 6-6 6"/>
+        </svg>
       </a>
-    </div>
-  </section>
+    </section>
 
-  <div class="evenements-bandeau">
-    <span class="event-pill"><span class="dot" style="background:#6B1535"></span>Nonvitcha</span>
-    <span class="event-pill"><span class="dot" style="background:#C9922A"></span>Saint-Valentin</span>
-    <span class="event-pill"><span class="dot" style="background:#3D1A3A"></span>1er Mai</span>
-    <span class="event-pill"><span class="dot" style="background:#6B1535"></span>8 Mars</span>
-    <span class="event-pill"><span class="dot" style="background:#C9922A"></span>Noël</span>
-  </div>
+    <div class="vague" data-vague data-vague-fill="vague-fill-aubergine" data-vague-fragment="assets/images/fragments/fragment-1.webp"></div>
 
-  <div class="vague" data-vague data-vague-fill="vague-fill-creme-fonce" data-vague-fragment="assets/images/fragments/fragment-3.webp"></div>
 
-  <!-- ==================== CATALOGUE ==================== -->
-  <section class="section section-creme-fonce" id="catalogue" aria-label="Catalogue des pagnes">
-    <div class="section-header">
-      <div class="reveal">
-        <h2 class="section-title">Le pagne de<br>chaque moment</h2>
-      </div>
-      <p class="section-note reveal reveal-delay-1">
-        Du mariage à la Saint-Valentin, chaque événement a son motif, sa couleur, son histoire.
-      </p>
-    </div>
-
-    <div class="catalogue-filters" role="group" aria-label="Filtrer par catégorie"></div>
-    <div class="catalogue-grid" role="list" aria-label="Pagnes disponibles"></div>
-
-    <div class="gros-banner reveal">
-      <div>
-        <div class="gros-banner-title">Vous commandez pour un groupe ?</div>
-        <p class="gros-banner-text">Associations, entreprises ou organisateurs d'événements, demandez votre devis gros.</p>
-      </div>
-      <button class="btn-gros" data-action="commande-gros">Demander un devis</button>
-    </div>
-  </section>
-
-  <div class="vague" data-vague data-vague-fill="vague-fill-creme" data-vague-flip="true"></div>
-
-  <!-- ==================== LOOKBOOK ==================== -->
-  <section class="section" id="lookbook" aria-label="Aperçu du pagne sélectionné">
-    <div class="section-header">
-      <div class="reveal">
-        <h2 class="section-title">Vu sur eux</h2>
-      </div>
-      <p class="section-note reveal reveal-delay-1">
-        Sélectionnez un pagne dans le catalogue pour voir comment il se porte, en version femme ou homme.
-      </p>
-    </div>
-
-    <div class="lookbook-wrap">
-      <div class="lookbook-visual" role="img" aria-label="Visuel du pagne sélectionné">
-        <div class="lookbook-placeholder" aria-hidden="true">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-            <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-          </svg>
-          <p>Sélectionnez un pagne<br>dans le catalogue</p>
+    <!-- ==================== TÉMOIGNAGES — Captures WhatsApp ==================== -->
+    <section class="section" id="temoignages" aria-label="Témoignages clients">
+      <div class="section-header">
+        <div class="reveal">
+          <h2 class="section-title">Ce que nos<br>clients disent</h2>
         </div>
-        <div class="lookbook-genre-toggle" role="group" aria-label="Genre">
-          <button class="genre-btn active" data-genre="femme">Femme</button>
-          <button class="genre-btn" data-genre="homme">Homme</button>
-        </div>
+        <p class="section-note reveal reveal-delay-1">
+          La satisfaction de nos clients avant tout.
+        </p>
       </div>
 
-      <div class="lookbook-info">
-        <p class="lookbook-empty">« Choisissez un pagne dans le catalogue pour découvrir le look. »</p>
+      <div class="whatsapp-carrousel-wrap reveal-scale">
+        <button class="wa-nav wa-nav-prev" aria-label="Capture précédente">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+
+        <div class="whatsapp-carrousel" id="waCarrousel"></div>
+
+        <button class="wa-nav wa-nav-next" aria-label="Capture suivante">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
       </div>
+
+      <div class="wa-dots" id="waDots"></div>
+    </section>
+
+    <div class="vague" data-vague data-vague-fill="vague-fill-creme-fonce" data-vague-fragment="assets/images/fragments/fragment-2.webp"></div>
+
+    <!-- ==================== LIGHTBOX — Prévisualisation lookbook ==================== -->
+    <div class="lightbox-overlay" id="lightbox">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="">
     </div>
 
-    <a href="#catalogue" class="cta-retour-catalogue reveal">
-      <span class="cta-retour-mini">
-        <span class="cta-retour-swatch" style="background:#6B1535"></span>
-        <span class="cta-retour-swatch" style="background:#C9922A"></span>
-        <span class="cta-retour-swatch" style="background:#3D1A3A"></span>
-      </span>
-      <span class="cta-retour-text">Voir tout le catalogue</span>
-      <svg class="cta-retour-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-        <path d="M5 12h14M13 6l6 6-6 6"/>
-      </svg>
+    <!-- ==================== FAB WHATSAPP ==================== -->
+    <a class="fab-whatsapp" href="https://wa.me/22995345437?text=Bonjour%20Francom%20Shop%2C%20je%20veux%20commander%20un%20pagne%20!" target="_blank" rel="noopener" aria-label="Commander sur WhatsApp">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
-  </section>
-
-  <div class="vague" data-vague data-vague-fill="vague-fill-aubergine" data-vague-fragment="assets/images/fragments/fragment-1.webp"></div>
-
-
-  <!-- ==================== TÉMOIGNAGES — Captures WhatsApp ==================== -->
-  <section class="section" id="temoignages" aria-label="Témoignages clients">
-    <div class="section-header">
-      <div class="reveal">
-        <h2 class="section-title">Ce que nos<br>clients disent</h2>
-      </div>
-      <p class="section-note reveal reveal-delay-1">
-        La satisfaction de nos clients avant tout.
-      </p>
-    </div>
-
-    <div class="whatsapp-carrousel-wrap reveal-scale">
-      <button class="wa-nav wa-nav-prev" aria-label="Capture précédente">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 18l-6-6 6-6"/></svg>
-      </button>
-
-      <div class="whatsapp-carrousel" id="waCarrousel"></div>
-
-      <button class="wa-nav wa-nav-next" aria-label="Capture suivante">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 18l6-6-6-6"/></svg>
-      </button>
-    </div>
-
-    <div class="wa-dots" id="waDots"></div>
-  </section>
-
-  <div class="vague" data-vague data-vague-fill="vague-fill-creme-fonce" data-vague-fragment="assets/images/fragments/fragment-2.webp"></div>
-
-  <!-- ==================== LIGHTBOX — Prévisualisation lookbook ==================== -->
-  <div class="lightbox-overlay" id="lightbox">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-    </button>
-    <img class="lightbox-img" id="lightboxImg" src="" alt="">
-  </div>
-
-  <!-- ==================== FAB WHATSAPP ==================== -->
-  <a class="fab-whatsapp" href="https://wa.me/22995345437?text=Bonjour%20Francom%20Shop%2C%20je%20veux%20commander%20un%20pagne%20!" target="_blank" rel="noopener" aria-label="Commander sur WhatsApp">
-    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
-
+  </main>
   <!-- ==================== FOOTER ==================== -->
   <footer class="footer" role="contentinfo">
     <div class="footer-grid">

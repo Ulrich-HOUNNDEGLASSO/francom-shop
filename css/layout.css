@@ -62,7 +62,7 @@
 }
 
 .nav-logo img {
-  height: clamp(38px, 5vh, 52px);
+  height: clamp(60px, 8vh, 90px);
   width: auto;
   object-fit: contain;
 }
@@ -209,7 +209,7 @@
   flex-direction: column;
   gap: var(--space-xs);
   z-index: var(--z-content);
-  margin-top: var(--space-sm);
+  margin-top: 6rem;
 }
 
 .btn-primary {

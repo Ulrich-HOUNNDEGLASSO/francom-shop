@@ -1,9 +1,5 @@
-// ============================================
 // CATALOGUE — Données Francom Shop
-// Placeholders nommés : remplacer les fichiers dans
-// assets/images/ en gardant exactement ces noms.
-// Toutes les photos sont en .webp, logo/fragments en .png
-// ============================================
+
 
 const WHATSAPP_NUMBER = "22995345437";
 
@@ -119,12 +115,12 @@ const categories = [
 // ============================================
 
 const whatsappCaptures = [
-  { image: "assets/images/whatsapp/capture-1.webp", caption: "Mariage · Cotonou" },
-  { image: "assets/images/whatsapp/capture-2.webp", caption: "8 Mars · Association" },
-  { image: "assets/images/whatsapp/capture-3.webp", caption: "Anniversaire · Cotonou" },
-  { image: "assets/images/whatsapp/capture-4.webp", caption: "Nonvitcha · Porto-Novo" },
-  { image: "assets/images/whatsapp/capture-5.webp", caption: "Commande en gros · Entreprise" },
-  { image: "assets/images/whatsapp/capture-6.webp", caption: "Saint-Valentin · Cotonou" },
+  { image: "assets/images/whatsapp/capture-1.webp", caption: "Mariage" },
+  { image: "assets/images/whatsapp/capture-2.webp", caption: "8 Mars" },
+  { image: "assets/images/whatsapp/capture-3.webp", caption: "Anniversaire" },
+  { image: "assets/images/whatsapp/capture-4.webp", caption: "Nonvitcha" },
+  { image: "assets/images/whatsapp/capture-5.webp", caption: "Commande en gros" },
+  { image: "assets/images/whatsapp/capture-6.webp", caption: "Saint-Valentin" },
 ];
 
 export { pagnes, categories, whatsappCaptures, WHATSAPP_NUMBER };
